@@ -1,0 +1,29 @@
+    ### List All Products
+    GET http://localhost:8080/products
+
+    ### List All Products With Status
+    GET http://localhost:8080/products?status=OUT_OF_STOCK
+
+    ### Add Product
+    POST http://localhost:8080/products/add
+    Content-Type: application/json
+
+    {
+      "name": "Batata Assada",
+      "price": 3.00,
+      "status": "AVAILABLE",
+      "description": "Pacote com 250g de batatas fritas."
+    }
+
+    ### Remove Product
+    POST http://localhost:8080/products/remove/4
+
+
+    ### Update Product
+    POST http://localhost:8080/products/update/8
+    Content-Type: application/json
+
+    {
+      "status": "IN_PRODUCTION",
+      "description": "Pacote com 250g de batatas assadas."
+    }
